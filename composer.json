@@ -1,0 +1,13 @@
+{
+    "name": "vendor/giftsdmin",
+    "description": "Описание проекта giftsdmin.",
+    "authors": [
+        {
+            "name": "mark",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+
+    }
+}
