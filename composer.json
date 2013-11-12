@@ -4,10 +4,13 @@
     "authors": [
         {
             "name": "mark",
-            "email": "your@email.here"
+            "email": "iormark@ya.ru"
         }
     ],
     "require": {
 
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
     }
 }

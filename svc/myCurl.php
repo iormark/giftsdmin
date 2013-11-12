@@ -90,7 +90,8 @@ class myCurl {
         curl_setopt($s, CURLOPT_FOLLOWLOCATION, $this->_followlocation);
         curl_setopt($s, CURLOPT_COOKIEJAR, $this->_cookieFileLocation);
         curl_setopt($s, CURLOPT_COOKIEFILE, $this->_cookieFileLocation);
-
+        
+        
         if ($this->authentication == 1) {
             curl_setopt($s, CURLOPT_USERPWD, $this->auth_name . ':' . $this->auth_pass);
         }
