@@ -1,0 +1,29 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    max-width: 900px;
+    min-width: 600px;
+    margin: 8px auto;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: .4em;
+} 
+
+hr {color: #ddd; background-color:#ddd;border:0px none;height:1px;clear:both;}
+input {border: 1px solid #ddd; font-size: small;}
+input.default {width:180px;}
+fieldset {border: 1px solid #ddd; border-radius: .4em;background-color: #fff}
+
+
+#bar {margin-bottom: 1em;font-size: 16px;}
+#bar a {margin-right: 1em}
+
+.gift__item {}
+.gift__item a {color: #1071d1;}
+.gift__info, .gift__action {padding: 1em 0;margin: .5em 0 2em; }
+.gift__info {float: left;width: 60%;}
+.gift__action {float: right; }
+.gift__order_id input[type="number"]{ }
+.gift__meta {background-color: #eee;margin: .2em 0 0 0;font-size: 12px;padding: 0 .5em}

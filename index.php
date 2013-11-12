@@ -15,7 +15,7 @@ class Index {
      * System config.
      */
     public function init() {
-        ini_set('display_errors','On'); 
+        ini_set('display_errors', 'On');
         error_reporting(E_ALL | E_STRICT);
         mb_internal_encoding('UTF-8');
         set_exception_handler(array($this, 'handleException'));
@@ -27,7 +27,6 @@ class Index {
      * Exception handler.
      */
     public function handleException($ex) {
-        echo 'error';
         $extra = array('message' => $ex->getMessage());
         if ($ex instanceof NotFoundException) {
             header('HTTP/1.0 404 Not Found');
@@ -43,7 +42,9 @@ class Index {
      */
     public function loadClass($name) {
         $classes = array(
-            'API' => './svc/API.php',
+            'Utils' => './svc/Utils.php',
+            'myCurl' => './svc/myCurl.php',
+            //'API' => './svc/API.php',
             'NotFoundException' => './exception/NotFoundException.php',
         );
         if (!array_key_exists($name, $classes)) {
@@ -61,8 +62,17 @@ class Index {
 
     private function runPage($page, array $extra = array()) {
         if ($this->hasTemplate($page)) {
+
+            if ($this->hasScript($page)) {
+                require $this->getScript($page);
+            }
+
             $template = $this->getTemplate($page);
-            require self::LAYOUT_DIR . 'index.php';
+            if (!array_key_exists('ajax', $_GET)) {
+                require self::LAYOUT_DIR . 'index.php';
+            } else {
+                require $template;
+            }
         } else {
             throw new NotFoundException('Page "' . $page . '" not found');
         }
@@ -76,8 +86,16 @@ class Index {
         return $page;
     }
 
-    private function getTemplate($page) {
+    private function getScript($page) {
         return self::PAGE_DIR . $page . '.php';
+    }
+
+    private function hasScript($page) {
+        return file_exists($this->getScript($page));
+    }
+
+    private function getTemplate($page) {
+        return self::PAGE_DIR . $page . 'Tpl.php';
     }
 
     private function hasTemplate($page) {

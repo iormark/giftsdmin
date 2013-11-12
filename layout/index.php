@@ -2,17 +2,22 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
-        <script type="text/javascript" src="gifts.js"></script>
+        <title>GiftDmin - </title>
+        <link href="giftsdmid.css?1" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="giftsdmid.js?1"></script>
         <meta property="boomstarter:shop_uuid" content="27bb3bf8-f7a2-49e9-8445-9d062c7d3871">
         <meta property="boomstarter:shop_key" content="e400ede5e3">
     </head>
-    <body style="border: 1px solid #ddd;padding: 1em">
-        <div id="bar" style="margin-bottom: 1em;">
-            <a href="javascript:" onclick="Gifts.all()">Все</a>
+    <body>
+        <div id="bar">
+            <a href="/giftsdmin/">Главная</a> | &nbsp; &nbsp;
+            <a href="?q=gifts">Все</a>
+            <a href="?q=gifts&fil=pending">В ожидании</a>
+            <a href="?q=gifts&fil=shipping">В доставке</a>
+            <a href="?q=gifts&fil=delivered">Доставлены</a>
         </div>
 
-        <div style="margin-bottom: 1em;">
+        <div style="margin-bottom: 2em;">
             <?php require $template; ?>
         </div>
         

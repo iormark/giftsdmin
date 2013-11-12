@@ -1,39 +1,44 @@
 <?php
 
-$api = new API();
-$gifts = objectToArray($api->getGifts());
+$uuid = '';
+if (array_key_exists('uuid', $_GET)) {
+    $uuid = $_GET['uuid'];
+}
+$filter = '';
+if (array_key_exists('fil', $_GET)) {
+    $filter = '/' . $_GET['fil'];
+}
+/*
+  echo 'https://private-92b2-boomstarter.apiary.io/api/v1.1/partners/gifts' . $filter . '?'
+  . 'offset=0&limit=10&shop_uuid=27bb3bf8-f7a2-49e9-8445-9d062c7d3871&'
+  . 'shop_token=f9e3218e-4eb1-4c03-8e40-fa4b41a0a4b2<br>';
+ */
 
-foreach ($gifts['gifts'] as $gifts_key => $gifts_val) {
-    echo 'Название: ' . $gifts_val['name'] . '<br>';
-    echo 'Обязался: ' . $gifts_val['pledged'] . '<br>';
 
-    if (!empty($gifts_val['location']['country']['name'])) {
-        echo $gifts_val['location']['country']['name']. '<br>';
-    }
+https://private-92b2-boomstarter.apiary.io/api/v1.1/partners/gifts/
+
+$api = new myCurl('https://private-92b2-boomstarter.apiary.io/api/v1.1/partners/gifts' . $filter . '?'
+        . 'offset=0&limit=10&shop_uuid=27bb3bf8-f7a2-49e9-8445-9d062c7d3871&'
+        . 'shop_token=f9e3218e-4eb1-4c03-8e40-fa4b41a0a4b2');
+$api->createCurl();
 
 
-    foreach ($gifts_val['owner'] as $owner_key => $owner_val) {
-        echo ': ' . $owner_val . '<br>';
-    }
+
+if (array_key_exists('post', $_GET)) {
+
+    $postFields = array(
+        //'product_id' => $uuid,
+        'order_id' => 101234567,
+            //'shop_uuid' => '27bb3bf8-f7a2-49e9-8445-9d062c7d3871',
+            //'shop_token' => 'f9e3218e-4eb1-4c03-8e40-fa4b41a0a4b2'
+    );
+    $api->setPost($postFields);
 }
 
-echo '<br>';
-echo '<br>';
-echo '<hr>';
-echo '<br>';
-
-var_dump($gifts);
-
-function objectToArray($d) {
-    if (is_object($d)) {
-        $d = get_object_vars($d);
-    }
-
-    if (is_array($d)) {
-        return array_map(__FUNCTION__, $d);
-    } else {
-        return $d;
-    }
-}
-
+$gifts = Utils::objectToArray(json_decode($api->tostring()));
+/*
+  $gifts = Utils::objectToArray($api->getGifts($method,
+  'https://private-92b2-boomstarter.apiary.io/api/v1.1/partners/gifts'.$filter.'?'
+  . 'offset=0&limit=10&shop_uuid=27bb3bf8-f7a2-49e9-8445-9d062c7d3871&'
+  . 'shop_token=f9e3218e-4eb1-4c03-8e40-fa4b41a0a4b2', 'application/json')); */
 ?>
