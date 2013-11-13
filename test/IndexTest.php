@@ -1,7 +1,7 @@
 <?php
 
-require_once '../vendor/phpunit/phpunit/PHPUnit/Autoload.php';
-require_once '../index.php';
+require_once '/home/travis/build/iormark/giftsdmin/vendor/phpunit/phpunit/PHPUnit/Autoload.php';
+require_once '/home/travis/build/iormark/giftsdmin/index.php';
 
 /**
  * The content of this project is licensed under the 
