@@ -20,6 +20,7 @@ $fields = array(
 ```
 
 - [giftsdmid.js][giftsdmid]
+
 ```javascript
 var params = {
    shop_uuid: '27bb3bf8-f7a2-49e9-8445-9d062c7d3871',
