@@ -1,7 +1,7 @@
 <?php
 
-require_once '../vendor/phpunit/phpunit/PHPUnit/Autoload.php';
-require_once '../index.php';
+require_once dirname(__FILE__).'/vendor/phpunit/phpunit/PHPUnit/Autoload.php';
+require_once dirname(__FILE__).'/index.php';
 
 /**
  * The content of this project is licensed under the 
