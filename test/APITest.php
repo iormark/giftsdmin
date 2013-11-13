@@ -2,14 +2,11 @@
 
 require_once '../vendor/phpunit/phpunit/PHPUnit/Autoload.php';
 require_once '../svc/API.php';
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
- * Description of APITest
+ * The content of this project is licensed under the 
+ * Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) 
+ * http://creativecommons.org/licenses/by-nc/3.0/
  *
  * @author mark
  */
