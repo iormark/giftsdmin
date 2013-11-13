@@ -24,7 +24,7 @@ class APITest extends PHPUnit_Framework_TestCase {
         );
         $a = new API();
         $a->setGift('https://private-92b2-boomstarter.apiary.io/api/v1.1/partners/gifts?', $fields);
-        print $a->getGift();
+        
     }
 
 }

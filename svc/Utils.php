@@ -1,7 +1,11 @@
 <?php
 
 /**
- * Miscellaneous utility methods.
+ * The content of this project is licensed under the 
+ * Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) 
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ * 
+ * @author mark
  */
 final class Utils {
 
@@ -9,6 +13,11 @@ final class Utils {
         
     }
 
+    /**
+     * stdClass to Array.
+     * @param type $d
+     * @return type
+     */
     public static function objectToArray($d) {
         if (is_object($d)) {
             $d = get_object_vars($d);
@@ -23,8 +32,8 @@ final class Utils {
 
     /**
      * Format date.
-     * @param DateTime $date date to be formatted
-     * @return string formatted date
+     * @param DateTime $date
+     * @return string
      */
     public static function formatDate(DateTime $date = null) {
         if ($date === null) {
@@ -35,8 +44,8 @@ final class Utils {
 
     /**
      * Format date and time.
-     * @param DateTime $date date to be formatted
-     * @return string formatted date and time
+     * @param DateTime $date
+     * @return string
      */
     public static function formatDateTime(DateTime $date = null) {
         if ($date === null) {

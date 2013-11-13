@@ -1,16 +1,23 @@
+<?php
+/**
+ * The content of this project is licensed under the 
+ * Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) 
+ * http://creativecommons.org/licenses/by-nc/3.0/
+ * 
+ * @author mark
+ */
+?>
+
 <h1>Welcome!</h1>
 
-<p class="p">Welcome to the NetBeans PHP IDE sample - <b>TODO List application</b>.</p>
-<ul class="p">
-    This sample does not use any PHP framework, it will show you possibilities how to:
-    <li>prevent public access to your scripts</li>
-    <li>config your application</li>
-    <li>access your database data</li>
-    <li>change your database data (with redirect-after-post pattern)</li>
-    <li>validate your data</li>
-    <li>split scripts and templates</li>
-    <li>handle expected and unexpected exceptions</li>
+<p>Добро пожаловать в <b>панель администрации</b> основанной на API <a href="http://docs.boomstarter.apiary.io">http://docs.boomstarter.apiary.io</a>.</p>
+<ul>
+    <li>На каждой странице в низу, установлена кнопка "Хочу в подарок"</li>
+    <li>Простая панель администрации, где видно 4е категории подарков 
+        (все, в ожидании, в доставке, доставлены) и можно менять состояние подарка: 
+        подтвердить подарок, установить дату доставки и подтвердить доставку.</li>
 </ul>
-<p class="p">Detailed information can be found in the <i>readme.html</i> file.</p>
-<p class="p"><b>This sample is not intented to be used on a production server without any changes.</b></p>
+
+<p>Подробную информацию можно найти в <a href="https://github.com/iormark/giftsdmin/blob/master/README.md">README.md</a></p>
+<p>Сборка и тестирование <a href="https://github.com/iormark/giftsdmin">travis-ci.org</a>.</p>
 
