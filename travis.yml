@@ -3,4 +3,4 @@ php:
   - 5.3
   - 5.4
   - 5.5
-script: phpunit --stderr --bootstrap tests/APITest.php tests/IndexTest.php
+script: phpunit --colors tests/APITest.php tests/IndexTest.php
