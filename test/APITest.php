@@ -1,7 +1,7 @@
 <?php
 
-require_once dirname(__FILE__).'/vendor/phpunit/phpunit/PHPUnit/Autoload.php';
-require_once dirname(__FILE__).'/svc/API.php';
+require_once '../vendor/phpunit/phpunit/PHPUnit/Autoload.php';
+require_once '../svc/API.php';
 
 /**
  * The content of this project is licensed under the 
