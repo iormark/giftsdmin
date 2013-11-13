@@ -1,7 +1,7 @@
 giftsdmin
 =========
 
-[![Build Status](https://travis-ci.org/iormark/giftdmin.png)](https://travis-ci.org/iormark/giftdmin)
+[![Build Status](https://travis-ci.org/iormark/giftsdmin.png)](https://travis-ci.org/iormark/giftsdmin)
 
 Содержание этого проекта под лицензией Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) http://creativecommons.org/licenses/by-nc/3.0/
 
