@@ -43,8 +43,7 @@ class Index {
     public function loadClass($name) {
         $classes = array(
             'Utils' => dirname(__FILE__).'/svc/Utils.php',
-            'myCurl' => dirname(__FILE__).'/svc/myCurl.php',
-            //'API' => './svc/API.php',
+            'API' => './svc/API.php',
             'NotFoundException' => dirname(__FILE__).'/exception/NotFoundException.php',
         );
         if (!array_key_exists($name, $classes)) {

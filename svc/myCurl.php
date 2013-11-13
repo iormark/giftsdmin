@@ -21,6 +21,7 @@ class myCurl {
     protected $_cookieFileLocation = './cookie.txt';
     protected $_post;
     protected $_postFields;
+    protected $_getFields;
     protected $_referer = "/";
     protected $_session;
     protected $_webpage;
@@ -65,10 +66,15 @@ class myCurl {
     public function setCookiFileLocation($path) {
         $this->_cookieFileLocation = $path;
     }
-
+    
     public function setPost($postFields) {
         $this->_post = true;
         $this->_postFields = $postFields;
+    }
+    
+    public function setGet($getFields) {
+        $this->_post = false;
+        $this->_getFields = $getFields;
     }
 
     public function setUserAgent($userAgent) {
@@ -98,6 +104,9 @@ class myCurl {
         if ($this->_post) {
             curl_setopt($s, CURLOPT_POST, true);
             curl_setopt($s, CURLOPT_POSTFIELDS, $this->_postFields);
+        } else {
+            //curl_setopt($s, CURLOPT_POST, false);
+            curl_setopt($s, CURLOPT_POSTFIELDS, $this->_getFields);
         }
 
         if ($this->_includeHeader) {
