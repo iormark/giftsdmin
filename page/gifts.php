@@ -1,9 +1,5 @@
 <?php
 
-$uuid = '';
-if (array_key_exists('uuid', $_GET)) {
-    $uuid = $_GET['uuid'];
-}
 $filter = '';
 if (array_key_exists('fil', $_GET)) {
     $filter = '/' . $_GET['fil'];
@@ -16,15 +12,15 @@ $api = new myCurl('https://private-92b2-boomstarter.apiary.io/api/v1.1/partners/
 $api->createCurl();
 
 
-
+/*
 if (array_key_exists('post', $_GET)) {
 
     $postFields = array(
-        'order_id' => 101234567,
+        'order_id' => mt_rand (10000001, 2147483647),
     );
     $api->setPost($postFields);
 }
-
+*/
 $gifts = Utils::objectToArray(json_decode($api->tostring()));
 
 ?>

@@ -36,7 +36,7 @@
 
                         <div>
                             <?php if (empty($gifts_val['order_id'])): ?>
-                                <input type="text" name="order_id" value="<?php echo $gifts_val['order_id']; ?>" placeholder="номер заказа" class="default"><br>
+                            <input type="text" name="order_id" value="<?php echo empty($gifts_val['order_id'])? mt_rand (10000001, 2147483647) : $gifts_val['order_id']; ?>" placeholder="номер заказа" class="default"><br>
                                 <button onclick="Gifts.save(this, '<?php echo $gifts_val['uuid']; ?>', 'order', 'post')">Сохранить</button>
                             <?php endif; ?>
                         </div>
