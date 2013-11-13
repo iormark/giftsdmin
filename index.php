@@ -17,7 +17,6 @@ class Index {
      * System config.
      */
     public function init() {
-        ini_set('display_errors', 'On');
         error_reporting(E_ALL | E_STRICT);
         mb_internal_encoding('UTF-8');
         set_exception_handler(array($this, 'handleException'));
