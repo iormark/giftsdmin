@@ -19,7 +19,7 @@ giftsdmin
 
 Токен и UUID магазина, указывать непосредственно в коде:
 
-- [gifts.php][gifts]
+- [gifts.php][gifts] 
 
 ```php
 $fields = array(
